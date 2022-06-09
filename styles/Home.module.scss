@@ -1,0 +1,218 @@
+.container {
+  padding: 0 2rem;
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+
+    min-height: 100vh;
+    padding: 4rem 0;
+    .filtersContainer {
+      width: 20%;
+
+      .titleAndClearContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid gray;
+        height: 3rem;
+        > h4 {
+          margin: 0;
+        }
+        > button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: #0af;
+          color: #fff;
+          border: 0;
+          padding: 0.5rem;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: #2969e0;
+          }
+          > svg {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      .searchContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 2.5rem;
+
+        margin-bottom: 1rem;
+
+        > input {
+          background: #f8f8f8;
+          padding: 0.15rem 1rem;
+          border: 1px solid rgba(18, 18, 18, 0.4);
+          width: 90%;
+          height: 100%;
+          &:focus {
+            outline: none;
+            background: #ebebeb;
+            border-color: rgba(18, 18, 18, 0.4);
+          }
+        }
+        .searchButton {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 10%;
+          height: 100%;
+          background-color: #0af;
+          color: #fff;
+          border: 0;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: #2969e0;
+          }
+          // > svg {
+          //   font-size: 10px;
+          // }
+        }
+      }
+
+      .checkBoxesContainer {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid lightgray;
+        .checkBox {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          input,
+          label {
+            cursor: pointer;
+          }
+          label {
+            margin-top: -0.1rem;
+            margin-left: 0.25rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .filterButton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        padding: 0.5rem 0;
+        margin-top: 1rem;
+        font-size: 1rem;
+
+        color: #fff;
+        background-color: #0af;
+        border: 1px solid #0af;
+
+        cursor: pointer;
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: #2969e0;
+        }
+        > svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .productsInfo {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+
+      .emptyContainer {
+        height: 3rem;
+        width: 100%;
+        border-bottom: 1px solid gray;
+        margin-bottom: 1rem;
+      }
+      .results {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid gray;
+      }
+
+      .pagination {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: auto;
+
+        > svg {
+          cursor: pointer;
+          margin-right: 0.5rem;
+
+          &:last-child {
+            margin-left: 0.5rem;
+          }
+        }
+        > button {
+          border: 0;
+          background-color: transparent;
+          padding: 0.5rem 1rem;
+          transition: all 0.2s;
+          cursor: pointer;
+          &.activePage,
+          &:hover {
+            background-color: #0af;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .container {
+    .main {
+      .filtersContainer {
+        width: 25%;
+      }
+      .productsInfo {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    .main {
+      .filtersContainer {
+        width: 30%;
+      }
+      .productsInfo {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    .main {
+      flex-direction: column;
+
+      .filtersContainer {
+        width: 100%;
+      }
+      .productsInfo {
+        width: 100%;
+      }
+    }
+  }
+}
