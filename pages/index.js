@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import { useState, useRef } from "react";
 import axios from "axios";
-import ProductList from "../components/products/productList";
+import ProductList from "../components/products/ProductList";
 import { MdRefresh } from "react-icons/md";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GoArrowSmallLeft, GoArrowSmallRight } from "react-icons/go";
