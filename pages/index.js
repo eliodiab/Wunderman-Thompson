@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import ProductList from "../components/products/productList";
 import { MdRefresh } from "react-icons/md";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/Ai";
+import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { GoArrowSmallLeft, GoArrowSmallRight } from "react-icons/go";
 
 export default function Home(props) {
